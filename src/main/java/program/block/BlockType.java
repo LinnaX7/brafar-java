@@ -1,0 +1,30 @@
+package program.block;
+
+public enum BlockType{
+    EMPTY_BLOCK,
+    IF_BLOCK,
+    IF_COND,
+    IF_BODY,
+    ELSE_BODY,
+    FOR_BLOCK,
+    FOR_INIT,
+    FOR_UPDATE,
+    FOR_COMP,
+    FOR_BODY,
+    WHILE_BLOCK,
+    WHILE_COND,
+    WHILE_BODY,
+    FOREACH_BLOCK,
+    FOREACH_ITER,
+    FOREACH_BODY,
+    SWITCH_BLOCK,
+    SWITCH_SELECTOR,
+    SWITCH_ENTRY,
+    CASE_LABELS,
+    CASE_BODY,
+    RETURN,
+    BREAK,
+    CONTINUE,
+    BASIC_BLOCK,
+    EMPTY_STMT
+}
