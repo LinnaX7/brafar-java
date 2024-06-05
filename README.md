@@ -64,7 +64,7 @@ Given these inputs, Brafar tries to repair all buggy programs by inferring input
 ## Running Brafar
 
 ---
-The Brafar tool takes a given buggy program, one correct program and a set of testsuite as input. 
+The Brafar tool takes a given buggy program, a set of correct programs and a set of testsuite as input. 
 
 ### Running example
 
