@@ -24,35 +24,48 @@ The Brafar tool takes a given buggy program, a set of correct programs and a set
 
 ### Running example
 
-The ```example/``` directory contains a running example:
+The ```example/``` directory contains a running example from the second assignment of the dataset:
 ```
 |-example
-|    |-test
-|    |   |-SpecialNumberTest.java
-|    |   
-|    |-correct
-|    |   |-001
-|    |   |   |-src
-|    |   |   |   |-SpecialNumber.java
-|    |   |-002
-|    |   |   |-src
-|    |   |   |   |-SpecialNumber.java
-|    |   |-...
-|    |   |   |-src
-|    |   |   |   |-SpecialNumber.java
-|    |   |
-|    |-...
-|    |
-|    |-wrong
-|    |   |-src
-|    |   |   |-SpecialNumber.java
-|    |   |
-|    |
+|   |-test
+|   |   |-comp
+|   |   |   |-assignment2
+|   |   |   |   |-SpecialNumberTest.java
+|   |   
+|   |-correct
+|   |   |-001
+|   |   |   |-src
+|   |   |   |   |-comp
+|   |   |   |   |   |-assignment2
+|   |   |   |   |   |   |-SpecialNumber.java
+|   |   |-002
+|   |   |   |-src
+|   |   |   |   |-comp
+|   |   |   |   |   |-assignment2
+|   |   |   |   |   |   |-SpecialNumber.java
+|   |   |-...
+|   |   |   |-src
+|   |   |   |   |-comp
+|   |   |   |   |   |-assignment2
+|   |   |   |   |   |   |-SpecialNumber.java
+|   |
+|   |-wrong
+|   |   |-src
+|   |   |   |-comp
+|   |   |   |   |-assignment2
+|   |   |   |   |   |-SpecialNumber.java
+|   |
+|   |-description.md
 ```
 
 * The below command runs Brafar on the example code. 
 ```shell
-java -jar brafar-system.jar --BuggyProgramSourceDir ./example/wrong/src --CorrectProgramsSourceDir ./example/correct --MethodToFix isSpecial@SpecialNumber --ProgramTestClass SpecialNumberTest --ProgramTestSourceDir ./example/test
+java -jar brafar-system.jar 
+--BuggyProgramSourceDir ./example/wrong/src
+--CorrectProgramsSourceDir ./example/correct
+--MethodToFix isSpecial@comp.assignment2.SpecialNumber
+--ProgramTestClass comp.assignment2.SpecialNumberTest
+--ProgramTestSourceDir ./example/test
 ```
 * Work Dir
 ```
@@ -103,33 +116,45 @@ Given these inputs, Brafar tries to repair all buggy programs by inferring input
 
 ```
 |-data
-    |-Problemxx
-    |    |-test
-    |    |   |-XXXTest.java
-    |    |   
-    |    |-correct
-    |    |   |-001
-    |    |   |   |-src
-    |    |   |   |   |-xxx.java
-    |    |   |
-    |    |   |-002
-    |    |   |   |-src
-    |    |   |   |   |-xxx.java
-    |    |   |    
-    |    |   |-...
-    |    |   |
-    |    | 
-    |    |-wrong
-    |    |   |-001
-    |    |   |   |-src
-    |    |   |   |   |-xxx.java
-    |    |   |
-    |    |   |-002
-    |    |   |   |-src
-    |    |   |   |   |-xxx.java
-    |    |   | 
-    |    |   |-...
-    |    |   |
-    |-...
+|   |-Problemxx
+|   |   |-test
+|   |   |   |-comp
+|   |   |   |   |-assignmentX
+|   |   |   |   |   |-XXTest.java
+|   |   |   
+|   |   |-correct
+|   |   |   |-001
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |   |-002
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |   |-...
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |
+|   |   |-wrong
+|   |   |   |-001
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |   |-002
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |   |-...
+|   |   |   |   |-src
+|   |   |   |   |   |-comp
+|   |   |   |   |   |   |-assignmentX
+|   |   |   |   |   |   |   |-XX.java
+|   |   |-desscription.md
 ```
 
